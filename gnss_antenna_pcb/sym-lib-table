@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "gnss_antenna_lib")(type "KiCad")(uri "/Users/ricardogoncalves/Documents/GitHub/antenna-projects/GNSS_microstrip_antenna/lib_sch/gnss_antenna_lib.kicad_sym")(options "")(descr ""))
+)
