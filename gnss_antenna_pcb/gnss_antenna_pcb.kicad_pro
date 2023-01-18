@@ -44,8 +44,8 @@
         "silk_text_thickness": 0.15,
         "silk_text_upright": false,
         "zones": {
-          "45_degree_only": false,
-          "min_clearance": 0.508
+          "45_degree_only": true,
+          "min_clearance": 0.128
         }
       },
       "diff_pair_dimensions": [
@@ -55,7 +55,26 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "clearance|109825000|88180000|1d003848-5992-480a-9d23-676c723137f6|3fb75cb7-9f2a-4cc7-9ec0-21caef63b21e",
+        "clearance|109875000|113180000|8a6fbe2d-a495-4b60-b03d-ef35dee0cdee|93feeba1-f9a1-47ea-a76a-988890d0ac49",
+        "clearance|110675000|87500000|3e056940-1a33-4a28-a257-7b20cc68de5e|3fb75cb7-9f2a-4cc7-9ec0-21caef63b21e",
+        "clearance|110725000|112500000|e9568396-09a8-4af4-904c-b20cfb4ca7eb|93feeba1-f9a1-47ea-a76a-988890d0ac49",
+        "clearance|70100000|98337500|1288a526-8231-401b-baba-68b386fa5ea6|edcd9dc4-4b72-4165-9bd9-c4ff83001b3c",
+        "clearance|70200000|98787500|18541710-546f-4c14-bc1f-e85512f1fc91|edcd9dc4-4b72-4165-9bd9-c4ff83001b3c",
+        "clearance|70300000|98837500|b898dc35-567c-4431-9c3a-6dd6bb8463c1|edcd9dc4-4b72-4165-9bd9-c4ff83001b3c",
+        "clearance|71100000|100137500|b838c7d4-9f6b-4bb4-a64d-7e571c8c278e|5e8b81f4-a699-45c6-9138-7da2700bbb60",
+        "clearance|71200000|100187500|213a398a-7cd1-4cd0-b7fd-49ca2c25105e|5e8b81f4-a699-45c6-9138-7da2700bbb60",
+        "clearance|71300000|100637500|444d3479-6214-4f39-856e-c2f03d883647|5e8b81f4-a699-45c6-9138-7da2700bbb60",
+        "clearance|75322500|111975000|9a07f8b0-e5b8-4e87-b028-5b2bdfc8a5b0|ab0f4a79-22c4-43ab-99b6-93ffca904a78",
+        "clearance|75322500|112975000|06504d42-d531-4454-aac5-44566895bd83|ab0f4a79-22c4-43ab-99b6-93ffca904a78",
+        "clearance|75442500|87500000|74f417fe-d832-4ea6-9423-eaa9efe8a09b|184bbfa6-62be-4270-b05b-4a5170864955",
+        "clearance|76175000|112500000|b95ccf72-3609-4467-8662-182ccf7e2db6|ab0f4a79-22c4-43ab-99b6-93ffca904a78",
+        "clearance|76175000|87500000|52a0efe9-1efe-4f45-8661-3cf3b4d64944|184bbfa6-62be-4270-b05b-4a5170864955",
+        "clearance|76350000|112500000|df7f5c7b-0efe-4090-9bae-518c7631dd5d|ab0f4a79-22c4-43ab-99b6-93ffca904a78",
+        "clearance|76575000|113180000|b95ccf72-3609-4467-8662-182ccf7e2db6|b38cb8e9-ad67-4b0d-a50e-aa70ae9c26a0",
+        "clearance|76575000|86820000|52a0efe9-1efe-4f45-8661-3cf3b4d64944|3972c5cd-33ed-45b0-b659-d8ec0e6688be"
+      ],
       "meta": {
         "version": 2
       },
@@ -90,7 +109,7 @@
         "skew_out_of_range": "error",
         "through_hole_pad_without_hole": "error",
         "too_many_vias": "error",
-        "track_dangling": "warning",
+        "track_dangling": "ignore",
         "track_width": "error",
         "tracks_crossing": "error",
         "unconnected_items": "error",
@@ -110,7 +129,7 @@
         "min_microvia_diameter": 0.19999999999999998,
         "min_microvia_drill": 0.09999999999999999,
         "min_silk_clearance": 0.0,
-        "min_through_hole_diameter": 0.3,
+        "min_through_hole_diameter": 0.15,
         "min_track_width": 0.19999999999999998,
         "min_via_annular_width": 0.049999999999999996,
         "min_via_diameter": 0.39999999999999997,
@@ -121,12 +140,22 @@
       "track_widths": [
         0.0,
         0.254,
+        0.508,
+        1.016,
         1.36
       ],
       "via_dimensions": [
         {
           "diameter": 0.0,
           "drill": 0.0
+        },
+        {
+          "diameter": 0.45,
+          "drill": 0.2
+        },
+        {
+          "diameter": 0.8,
+          "drill": 0.4
         }
       ],
       "zones_allow_external_fillets": false,
@@ -418,7 +447,7 @@
       "model_mode": 0,
       "workbook_filename": ""
     },
-    "page_layout_descr_file": "/Users/ricardogoncalves/Documents/KiCad/6.0/page_layouts/page_layout_2022.kicad_wks",
+    "page_layout_descr_file": "/Users/ricardogoncalves/Documents/KiCad/6.0/page_layouts/page_layout_2023.kicad_wks",
     "plot_directory": "",
     "spice_adjust_passive_values": false,
     "spice_external_command": "spice \"%I\"",
