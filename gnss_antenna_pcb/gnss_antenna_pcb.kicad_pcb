@@ -7,6 +7,7 @@
   (paper "A4")
   (title_block
     (title "GNSS Microstrip Active Antenna")
+    (date "2022-12-18")
     (company "The Antenna Guy")
   )
 
